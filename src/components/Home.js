@@ -1,5 +1,6 @@
 import React from "react";
 // import NavBar from "./NavBar";
+import MagicSlide from "./MagicSlide";
 import "../comp-css/Home.css"
 
 //test
@@ -16,7 +17,7 @@ const Home = () => {
       
        <span className="emoji">🧙🏻‍♂</span> 
       </p>
-
+      <MagicSlide />
     </div>
   )
 }

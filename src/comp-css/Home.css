@@ -1,0 +1,10 @@
+.title {
+  text-align: center;
+  font-size: large;
+  border: 10px solid #000;
+  border-radius: 30px;
+}
+
+.emoji {
+  font-size: 60px;
+}

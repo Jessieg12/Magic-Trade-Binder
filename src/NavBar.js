@@ -1,14 +1,15 @@
 import React from "react";
+import { NavLink } from "react-router-dom"
 
 function NavBar(){
   return (
     <div>
-      <p>
-        Yes
-      </p>
-      <p>
-        no
-      </p>
+      <NavLink to="/">
+        Home
+      </NavLink>
+      <NavLink to="Something">
+        Something
+      </NavLink>
     </div>
   )
 }

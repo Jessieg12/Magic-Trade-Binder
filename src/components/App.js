@@ -1,20 +1,15 @@
-// import logo from './logo.svg';
-import './App.css';
-import NavBar from './NavBar';
+import React from "react";
+import Home from "./Home";
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
+    <div>
+      <Home />
     </div>
   );
 }
 
 export default App;
-
-
-
-//hello this is just a test 
 
 
 

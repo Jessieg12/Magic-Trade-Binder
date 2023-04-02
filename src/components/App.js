@@ -1,17 +1,18 @@
 import React from "react";
 import Home from "./Home";
+import BinderHome from "./BinderHome";
 
 
 function App() {
   return (
     <div>
       <Home />
+      <BinderHome />
     </div>
   );
 }
 
 export default App;
-
 
 
 

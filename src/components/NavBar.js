@@ -1,17 +1,17 @@
-// import React from "react";
+import React from "react";
 // import { NavLink } from "react-router-dom"
 
-// function NavBar(){
-//   return (
-//     <div>
-//       <NavLink to="/">
-//         Home
-//       </NavLink>
-//       <NavLink to="Something">
-//         Something
-//       </NavLink>
-//     </div>
-//   )
-// }
+function NavBar({onChangePage}){
 
-// export default NavBar
+  function handleLinkClick(e){
+    e.preventDefualt()
+    onChangePage(e.target.pathname)
+  }
+  return (
+    <nav>
+      <a onClick={handleLinkClick} href="/">Home</a>
+    </nav>
+  )
+}
+
+export default NavBar

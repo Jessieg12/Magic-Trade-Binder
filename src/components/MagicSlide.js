@@ -25,6 +25,7 @@ function MagicSlide(){
   return(
     <div>
       <img className="image" src={randomCard}/>
+      {/* <RandomCard /> */}
     </div>
   )
 }

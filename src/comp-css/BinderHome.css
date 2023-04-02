@@ -13,6 +13,8 @@
   height: 250px;
   padding: 15px;
   text-align: center;
+  font-size: large;
+  font-weight: bold;
 }
 
 .cardImage{

@@ -21,3 +21,14 @@
   width: 225px;
   height: 275px;
 }
+
+.legend{
+  margin-left: 2700px;
+  border: 5px solid red;
+  padding: 5px;
+  font-weight: bold;
+}
+
+input{
+  pointer-events: none;
+}

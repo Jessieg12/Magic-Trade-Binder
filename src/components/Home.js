@@ -7,7 +7,7 @@ import "../comp-css/Home.css"
 
 
 
-const Home = () => {
+const Home = ({cards}) => {
   return (
     <div>
       <p className="title">
@@ -17,7 +17,7 @@ const Home = () => {
       
        <span className="emoji">🧙🏻‍♂</span> 
       </p>
-      <MagicSlide />
+      <MagicSlide cards={cards} />
     </div>
   )
 }

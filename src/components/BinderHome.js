@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import NewCardForm from "./NewCardForm";
 import "../comp-css/BinderHome.css"
 
 /*
@@ -7,15 +8,15 @@ I would like to implement a way to Alphabetize the card names as they are being 
 */
 
 
-let URL = 'http://localhost:3007/binder'
+// let URL = 'http://localhost:3007/binder'
 
-function BinderHome(){
-  let [cards, setCards] = useState([])
-  useEffect(() =>{
-    fetch(URL)
-      .then((resp) => resp.json())
-      .then((cards) => setCards(cards))
-  },[])
+function BinderHome({cards}){
+  // let [cards, setCards] = useState([])
+  // useEffect(() =>{
+  //   fetch(URL)
+  //     .then((resp) => resp.json())
+  //     .then((cards) => setCards(cards))
+  // },[])
 
   let mappedCard = cards.map((card) => 
   <div 
@@ -33,6 +34,7 @@ function BinderHome(){
         {card.set}
       </p>
       <input 
+        className="trade"
         type="checkbox" 
         defaultChecked={card.trade}/>
         <label>
@@ -43,6 +45,7 @@ function BinderHome(){
   )
   return(
     <div>
+      <NewCardForm />
       <p className="binderTitle">Binder Home!</p>
       <div>
         <p className="legend">
@@ -56,7 +59,7 @@ function BinderHome(){
         </p>
       </div>
       {mappedCard}
-      
+
     </div>
   )
 }

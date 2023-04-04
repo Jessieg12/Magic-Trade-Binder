@@ -1,8 +1,10 @@
-import React, {useState, useEffect} from "react";
+import React
+//  , {useState, useEffect} 
+from "react";
 // import RandomCard from "./RandomCard";
 import "../comp-css/MagicSlide.css"
 
-const cardListURL = "http://localhost:3007/randomCards"
+// const cardListURL = "http://localhost:3007/randomCards"
 const cardList = [
   "https://cards.scryfall.io/large/front/a/6/a66e5673-e34b-46e8-a0e4-55f3ee20f99a.jpg?1673148477", 
   "https://cards.scryfall.io/large/front/f/4/f4eec210-5df0-4fb8-8eb1-e616d9995acc.jpg?1562941011", 
@@ -22,8 +24,8 @@ const cardList = [
 ]
 
 function MagicSlide(){
-  let [cards, setCards] = useState([])
-  let [index, setIndex] = useState([])
+  // let [cards, setCards] = useState([])
+  // let [index, setIndex] = useState([])
 
   // useEffect(() => {
   //   fetch(cardListURL)
@@ -33,11 +35,10 @@ function MagicSlide(){
 
 // useEffect(() =>{
 //     setIndex(Math.floor(Math.random() * cards.length))
-//   },[cards])
+//   },[])
 
   let randomIndex = (Math.floor(Math.random() * cardList.length))
   let randomCard = cardList[randomIndex]
-
 
   // let cardRender = cards[index].cardImage
     // let randomCard = cards[index]

@@ -20,68 +20,90 @@
       "image": "https://cards.scryfall.io/large/front/c/d/cd1deda0-c99d-4570-a5dd-f51eb5d12570.jpg?1562267420", 
       "set": "Modern Masters 2015",
       "trade": true
-    }
-  ],
-  "randomCards": [
-    {
-      "id": 0,
-      "cardImage": "https://cards.scryfall.io/large/front/4/c/4ce5b167-df7a-499e-8dcc-7aec2e28b382.jpg?1610161645"
     },
     {
-      "id": 1,
-      "cardImage": "https://cards.scryfall.io/large/front/a/6/a66e5673-e34b-46e8-a0e4-55f3ee20f99a.jpg?1673148477"
+      "id": 3, 
+      "cardName": "Dakkon, Shadow Slayer",
+      "image": "https://cards.scryfall.io/large/front/0/0/0013a9c4-77a1-418d-85c2-bd68b65cd3d4.jpg?1626098233", 
+      "set": "Modern Horizons 2",
+      "trade": true
     },
     {
-      "id": 2,
-      "cardImage": "https://cards.scryfall.io/large/front/f/4/f4eec210-5df0-4fb8-8eb1-e616d9995acc.jpg?1562941011"
+      "id": 4, 
+      "cardName": "Alhammarret's Archive", 
+      "image": "https://cards.scryfall.io/large/front/8/1/810c91b8-6b2f-469f-8fd1-568885178c9b.jpg?1580561371", 
+      "set": "Mystery Booster",
+      "trade": true
     },
     {
-      "id": 3,
-      "cardImage": "https://cards.scryfall.io/large/front/7/9/7928bb14-7631-4830-a756-26d1ea832ba2.jpg?1562612395"
+      "id": 5, 
+      "cardName": "Anafenza, the Foremost", 
+      "image": "https://cards.scryfall.io/large/front/c/8/c8b432a7-53da-4480-b571-e6feb1364a3a.jpg?1562793427", 
+      "set": "Khans of Takir",
+      "trade": true
+    },
+{
+      "id": 6, 
+      "cardName": "Ancient Copper Dragon", 
+      "image": "https://cards.scryfall.io/large/front/3/8/3836dddd-a7e4-499f-ad49-ce298aa65720.jpg?1674136426", 
+      "set": "Commander Legends: Battle for Baldur's Gate",
+      "trade": false
     },
     {
-      "id": 4,
-      "cardImage": "https://cards.scryfall.io/large/front/7/7/7743b587-e498-4761-9173-e803c9eed86b.jpg?1675645086"
+      "id": 7, 
+      "cardName": "Ancient Gold Dragon", 
+      "image": "https://cards.scryfall.io/large/front/4/2/421395b1-2694-42fd-bb90-0007e78adefc.jpg?1674134865", 
+      "set": "Commander Legends: Battle for Baldur's Gate",
+      "trade": true
     },
     {
-      "id": 5,
-      "cardImage": "https://cards.scryfall.io/large/front/6/8/683868c2-caaa-4084-8dbf-4903792b9c0f.jpg?1676935857"
+      "id": 8, 
+      "cardName": "Ao, the Dawn Sky", 
+      "image": "https://cards.scryfall.io/large/front/8/d/8d2c4063-7322-4041-a870-b95598a03e29.jpg?1654566143", 
+      "set": "Kamigawa: Neon Dynasty",
+      "trade": true
+    },
+{
+      "id": 9, 
+      "cardName": "Arahbo, Roar of the World", 
+      "image": "https://cards.scryfall.io/large/front/8/1/81dc3d00-97cd-4549-b5a4-15a1e08767f5.jpg?1567181403", 
+      "set": "Commander 2017",
+      "trade": false
     },
     {
-      "id": 6,
-      "cardImage": "https://cards.scryfall.io/large/front/a/d/adea296b-b320-4588-9d6e-cbb5db7c39e3.jpg?1674174198"
+      "id": 10, 
+      "cardName": "Archon of Cruelty", 
+      "image": "https://cards.scryfall.io/large/front/1/b/1be9d9a4-d7ee-4854-abc2-85cabf993ec9.jpg?1626095274", 
+      "set": "Modern Horizons 2",
+      "trade": true
     },
     {
-      "id": 7,
-      "cardImage": "https://cards.scryfall.io/large/front/b/9/b91dadcb-31e9-43b0-b425-c9311af3e9d7.jpg?1599708272"
+      "id": 11, 
+      "cardName": "Armada Wurm", 
+      "image": "https://cards.scryfall.io/large/front/5/0/50cb4bf3-70d1-4acc-a1fb-49f4ea74ca16.jpg?1562786220", 
+      "set": "Return to Ravnica",
+      "trade": true
+    },
+{
+      "id": 12, 
+      "cardName": "Ashcloud Phoenix", 
+      "image": "https://cards.scryfall.io/large/front/4/a/4a53752c-5689-4939-9a8b-bf59d88d7c6b.jpg?1562786146", 
+      "set": "Khans of Tarkir",
+      "trade": true
     },
     {
-      "id": 8,
-      "cardImage": "https://cards.scryfall.io/large/front/8/d/8d94b8ec-ecda-43c8-a60e-1ba33e6a54a4.jpg?1562616128"
+      "id": 13, 
+      "cardName": "Atsushi, the Blazing Sky", 
+      "image": "https://cards.scryfall.io/large/front/7/3/73b64c17-8a52-4d9d-a28b-7e0e945be059.jpg?1654567533", 
+      "set": "Kamigawa: Neon Dynasty",
+      "trade": true
     },
     {
-      "id": 9,
-      "cardImage": "https://cards.scryfall.io/large/front/8/5/851f8d1f-163c-4c4f-beee-431b64ec8a99.jpg?1626100364"
-    },
-    {
-      "id": 10,
-      "cardImage": "https://cards.scryfall.io/large/front/5/4/547888c3-a9a6-4413-b29a-6bcd8a9279bf.jpg?1657065647"
-    },
-    {
-      "id": 11,
-      "cardImage": "https://cards.scryfall.io/large/front/0/3/034b8d6d-95ea-434a-967a-e6675a7ce88a.jpg?1594736791"
-    },
-    {
-      "id": 12,
-      "cardImage": "https://cards.scryfall.io/large/front/2/6/26fecfd4-40c1-4ed3-bf58-22c7b98699a9.jpg?1670943073"
-    },
-    {
-      "id": 13,
-      "cardImage": "https://cards.scryfall.io/large/front/9/4/9476fe67-d2d3-4835-8ba6-2a17d18cc141.jpg?1651655539"
-    },
-    {
-      "id": 14,
-      "cardImage": "https://cards.scryfall.io/large/front/a/b/abf8df47-405c-42d8-be9e-0f0d0a49589b.jpg?1562931285"
+      "id": 14, 
+      "cardName": "Avacyn's Memorial", 
+      "image": "https://cards.scryfall.io/large/front/c/8/c8134a08-4c7f-419e-940d-95bc9f630ae2.jpg?1637628619", 
+      "set": "Midnight Hunt Commander",
+      "trade": false
     }
   ]
 }

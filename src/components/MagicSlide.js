@@ -3,7 +3,38 @@ import React
 from "react";
 // import RandomCard from "./RandomCard";
 import "../comp-css/MagicSlide.css"
-// const cardListURL = "http://localhost:3007/randomCards"
+
+
+function MagicSlide({cards}){
+
+  
+  return(
+    <div>
+      <img alt="RandomCard" className="image" src='https://backs.scryfall.io/large/2/2/222b7a3b-2321-4d4c-af19-19338b134971.jpg?1677416389' />
+    </div>
+  )
+}
+
+export default MagicSlide
+
+/*
+
+src={() =>handleRandomCard()}
+
+function MagicSlide(){
+  useEffect(() =>{
+    fetch(cardListURL)
+    .then((resp) => resp.json())
+    .then((card) => randomCard(card))
+  },[])
+
+  function randomCard(card){
+    const randomIndex = Math.floor(Math.random() * card.length)
+    let randomCard = (card[randomIndex])
+    return randomCard
+  }
+
+  // const cardListURL = "http://localhost:3007/randomCards"
 // const cardList = [
 //   "https://cards.scryfall.io/large/front/a/6/a66e5673-e34b-46e8-a0e4-55f3ee20f99a.jpg?1673148477", 
 //   "https://cards.scryfall.io/large/front/f/4/f4eec210-5df0-4fb8-8eb1-e616d9995acc.jpg?1562941011", 
@@ -22,7 +53,6 @@ import "../comp-css/MagicSlide.css"
 //   "https://cards.scryfall.io/large/front/4/c/4ce5b167-df7a-499e-8dcc-7aec2e28b382.jpg?1610161645"
 // ]
 
-function MagicSlide({cards}){
   
   // let newArray= []
 
@@ -81,33 +111,6 @@ function MagicSlide({cards}){
   // function handleRandomCard(){
   //   return cards[index].cardImage
   // }
-  
-  return(
-    <div>
-      <img alt="RandomCard" className="image" src='https://backs.scryfall.io/large/2/2/222b7a3b-2321-4d4c-af19-19338b134971.jpg?1677416389' />
-    </div>
-  )
-}
-
-export default MagicSlide
-
-/*
-
-src={() =>handleRandomCard()}
-
-function MagicSlide(){
-  useEffect(() =>{
-    fetch(cardListURL)
-    .then((resp) => resp.json())
-    .then((card) => randomCard(card))
-  },[])
-
-  function randomCard(card){
-    const randomIndex = Math.floor(Math.random() * card.length)
-    let randomCard = (card[randomIndex])
-    return randomCard
-  }
-
 */
 
 //

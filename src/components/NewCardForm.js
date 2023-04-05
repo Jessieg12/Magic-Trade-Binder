@@ -7,7 +7,7 @@ function handleValueChange(e){
 
 function NewCardForm(){
   return(
-    <div>
+    <div className="bottom">
       <div className="cardForm">
         <p> Please enter a new card name</p>
           <input className="formStyle" type="text" onChange={(e) =>handleValueChange(e)} placeholder="Enter card name"></input>

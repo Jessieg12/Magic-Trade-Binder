@@ -12,6 +12,7 @@ function App() {
       .then((cards) => setCards(cards))
   },[])
 
+   console.log(cards, "app")
   return (
     <div>
       <Home cards={cards} />

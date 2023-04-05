@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import NewCardForm from "./NewCardForm";
 import "../comp-css/BinderHome.css"
+import { tsConstructSignatureDeclaration } from "@babel/types";
 
 /*
 NOTE:
@@ -18,6 +19,7 @@ function BinderHome({cards}){
   //     .then((cards) => setCards(cards))
   // },[])
 
+  console.log(cards, "BinderHome")
   let mappedCard = cards.map((card) => 
   <div 
     className="card" 

@@ -7,7 +7,7 @@ import "../comp-css/Home.css"
 
 
 
-const Home = ({cards}) => {
+function Home({cards}) {
   return (
     <div>
       <p className="title">

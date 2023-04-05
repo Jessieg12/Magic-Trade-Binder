@@ -4,29 +4,15 @@ from "react";
 // import RandomCard from "./RandomCard";
 import "../comp-css/MagicSlide.css"
 
-let thisCard = {
-  "id": 1, 
-  "cardName": "Expropriate ", 
-  "image": "https://cards.scryfall.io/large/front/4/6/46423a22-781b-4cb0-b3a9-9bf888b4f82a.jpg?1573507481", 
-  "set": "Mystery Booster",
-  "trade": true
-}
 
 
-
-function MagicSlide({cards}){
-  
-  const string = (cards[Math.floor(Math.random() * cards.length)])
-
-console.log(string)
-
-  const randomCardSelected = <img alt="RandomCard" className="image" src={string} />
+function MagicSlide(){
 
   
   return(
     <div>
-      {randomCardSelected}
-      {/* <img alt="RandomCard" className="image" src={randomCardSelected} /> */}
+      <img alt="RandomCard" className="image" src="https://backs.scryfall.io/large/2/2/222b7a3b-2321-4d4c-af19-19338b134971.jpg?1677416389"/>
+     
     </div>
   )
 }
@@ -127,6 +113,38 @@ function MagicSlide(){
   // function handleRandomCard(){
   //   return cards[index].cardImage
   // }
+
+   { <img alt="RandomCard" className="image" src={randomCardSelected} /> }
+     // let [randomCard, setRandomCard] = useState([])
+  
+  // const randomElement = cards[Math.floor(Math.random() * cards.length)]
+
+  // let rCard = cards[string]
+  // useEffect(() => {
+  //   setRandomCard(rCard)
+  //   console.log(randomCard)
+  // },[])
+  // console.log(randomCard)
+
+    // let [randomCard, setRandomCard] = useState([])
+  
+  // const randomElement = cards[Math.floor(Math.random() * cards.length)]
+
+  // let rCard = cards[string]
+  // useEffect(() => {
+  //   setRandomCard(rCard)
+  //   console.log(randomCard)
+  // },[])
+  // console.log(randomCard)
+
+  let thisCard = {
+  "id": 1, 
+  "cardName": "Expropriate ", 
+  "image": "https://cards.scryfall.io/large/front/4/6/46423a22-781b-4cb0-b3a9-9bf888b4f82a.jpg?1573507481", 
+  "set": "Mystery Booster",
+  "trade": true
+}
+
 */
 
 //

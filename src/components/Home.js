@@ -7,7 +7,7 @@ import "../comp-css/Home.css"
 
 
 
-function Home({cards}) {
+function Home() {
   return (
     <div>
       <p className="title">
@@ -17,7 +17,7 @@ function Home({cards}) {
       
        <span className="emoji">🧙🏻‍♂</span> 
       </p>
-      <MagicSlide cards={cards} />
+      <MagicSlide />
     </div>
   )
 }

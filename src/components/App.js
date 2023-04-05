@@ -6,6 +6,7 @@ let URL = 'http://localhost:3007/binder'
 
 function App() {
   let [cards, setCards] = useState([])
+  
   useEffect(() =>{
     fetch(URL)
       .then((resp) => resp.json())
@@ -15,7 +16,7 @@ function App() {
    console.log(cards, "app")
   return (
     <div>
-      <Home cards={cards} />
+      <Home />
       <BinderHome cards={cards} />
     </div>
   );

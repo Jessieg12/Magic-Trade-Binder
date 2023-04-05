@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import NewCardForm from "./NewCardForm";
+import NewCardHome from "./NewCardHome";
 import "../comp-css/BinderHome.css"
 import { tsConstructSignatureDeclaration } from "@babel/types";
 
@@ -47,7 +47,7 @@ function BinderHome({cards}){
   )
   return(
     <div>
-      <NewCardForm />
+      <NewCardHome />
       <p className="binderTitle">Binder Home!</p>
       <div>
         <p className="legend">

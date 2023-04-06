@@ -1,25 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import NewCardHome from "./NewCardHome";
+import OrganizationBar from "./OrganizationBar";
 import "../comp-css/BinderHome.css"
-import { tsConstructSignatureDeclaration } from "@babel/types";
 
 /*
 NOTE:
 I would like to implement a way to Alphabetize the card names as they are being fetched!!
 */
 
-
-// let URL = 'http://localhost:3007/binder'
-
 function BinderHome({cards, URL, onAddCard}){
-  // let [cards, setCards] = useState([])
-  // useEffect(() =>{
-  //   fetch(URL)
-  //     .then((resp) => resp.json())
-  //     .then((cards) => setCards(cards))
-  // },[])
 
-  console.log(cards, "BinderHome")
+
+
   let mappedCard = cards.map((card) => 
   <div 
     className="card" 
@@ -60,6 +52,7 @@ function BinderHome({cards, URL, onAddCard}){
           </li>
         </p>
       </div>
+      <OrganizationBar />
       {mappedCard}
 
     </div>
@@ -122,5 +115,14 @@ Recycled code for future use if needed
 // </div>)
 
 // console.log(cards)
+
+ // let [cards, setCards] = useState([])
+  // useEffect(() =>{
+  //   fetch(URL)
+  //     .then((resp) => resp.json())
+  //     .then((cards) => setCards(cards))
+  // },[])
+
+  // let URL = 'http://localhost:3007/binder'
 
 */

@@ -62,6 +62,12 @@ function NewCardForm(){
          🃏</p>
         </form>
         </div>
+          <div className="cardPreviewCard">
+          <p className="cardPreviewText">Card Image Preview</p>
+          <img className="cardPreview" 
+            src='https://cards.scryfall.io/large/front/7/5/75994e0b-b0c7-4b0d-8f48-4be303429bd6.jpg?1674137453'>
+          </img>
+          </div>
       </div>
   )
 }

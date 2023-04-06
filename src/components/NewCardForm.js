@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import "../comp-css/NewCardForm.css"
 
-// function handleValueChange(e){
-//   console.log(e.target.value)
-// }
+// Richard Gar Card   https://cards.scryfall.io/large/front/4/9/493f3c04-2e12-44b3-957e-50c7861c4667.jpg?1562488374
 
-function NewCardForm(){
+function NewCardForm({URL, onAddCard}){
   let [cardName, setCardName] = useState('')
   let [cardSet, setCardSet] = useState('')
   let [cardImage, setCardImage] = useState('')
@@ -19,7 +17,15 @@ function NewCardForm(){
       cardImage,
       forTrade
     }
-    console.log(newCardInfo)
+    fetch(URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newCardInfo),
+  })
+    .then((r) => r.json())
+    .then((newCard) => onAddCard(newCard));
   }
 
   return(
@@ -62,11 +68,19 @@ function NewCardForm(){
          🃏</p>
         </form>
         </div>
+          <div className="wrapper">
           <div className="cardPreviewCard">
           <p className="cardPreviewText">Card Image Preview</p>
-          <img className="cardPreview" 
-            src='https://cards.scryfall.io/large/front/7/5/75994e0b-b0c7-4b0d-8f48-4be303429bd6.jpg?1674137453'>
-          </img>
+            {cardImage.length > 80 ? 
+             <img 
+              className="cardPreview" 
+              src={cardImage}>
+            </img> : 
+            <img 
+              className="cardPreview" 
+              src='https://cards.scryfall.io/large/front/4/9/493f3c04-2e12-44b3-957e-50c7861c4667.jpg?1562488374'>
+            </img>}
+          </div>
           </div>
       </div>
   )

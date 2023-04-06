@@ -11,7 +11,7 @@ I would like to implement a way to Alphabetize the card names as they are being 
 
 // let URL = 'http://localhost:3007/binder'
 
-function BinderHome({cards}){
+function BinderHome({cards, URL, onAddCard}){
   // let [cards, setCards] = useState([])
   // useEffect(() =>{
   //   fetch(URL)
@@ -24,21 +24,21 @@ function BinderHome({cards}){
   <div 
     className="card" 
     key={card.id}>
-      
+      <p>
     {card.cardName}
-  
+      </p>
       <img 
         alt="binderCards"
         className="cardImage" 
-        src={card.image}>
+        src={card.cardImage}>
       </img>
       <p>
-        {card.set}
+        {card.cardSet}
       </p>
       <input 
         className="trade"
         type="checkbox" 
-        defaultChecked={card.trade}/>
+        defaultChecked={card.forTrade}/>
         <label>
           Available for trade?
         </label>
@@ -47,7 +47,7 @@ function BinderHome({cards}){
   )
   return(
     <div>
-      <NewCardHome />
+      <NewCardHome URL={URL} onAddCard={onAddCard}/>
       <p className="binderTitle">Binder Home!</p>
       <div>
         <p className="legend">

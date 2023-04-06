@@ -13,11 +13,15 @@ function App() {
       .then((cards) => setCards(cards))
   },[])
 
+  function handleAddCard(newCard) {
+    setCards([...cards, newCard]);
+  }
+
    console.log(cards, "app")
   return (
     <div>
       <Home />
-      <BinderHome cards={cards} />
+      <BinderHome cards={cards} URL={URL} onAddCard={handleAddCard} />
     </div>
   );
 }

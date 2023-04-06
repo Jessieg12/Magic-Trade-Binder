@@ -2,7 +2,7 @@ import React from "react";
 import NewCardForm from "./NewCardForm";
 import "../comp-css/NewCardHome.css"
 
-function NewCardHome(){
+function NewCardHome({URL, onAddCard}){
 
   return(
     <div>
@@ -10,7 +10,7 @@ function NewCardHome(){
         <div>
           <h1 className="info">Use this form below to add new cards</h1>
         </div>
-      <NewCardForm />
+      <NewCardForm URL={URL} onAddCard={onAddCard}/>
     </div>
   )
 }

@@ -52,7 +52,7 @@ function BinderHome({cards, URL, onAddCard}){
           </li>
         </p>
       </div>
-      <OrganizationBar />
+      <OrganizationBar sortCardsBy={sortCards} onCheckedBox={onCheckedBox} />
       {mappedCard}
 
     </div>

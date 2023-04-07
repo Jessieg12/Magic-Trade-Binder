@@ -1,23 +1,27 @@
 import React from "react";
 import "../comp-css/OrganizationBar.css"
 
-function OrganizationBar(){
+function OrganizationBar({ onCheckedBox, sortCardsBy }){
+
+  function handleSorting(e){
+    onCheckedBox(e.target.value)
+  }
   
   return(
     <div className="OrgText">
-      <p>Sort by:
+      <p>Sort cards by:
       <label>
         <input
           type="checkbox"
           value="Alphabetically"
-          // checked={sortBy === 'Alphabetically'}
-          // onChange={sortStocks}
+          checked={sortCardsBy === false}
+          onChange={handleSorting}
         />
         Alphabetically
       </label>
       </p>
       <label>
-        <p>Filter by:
+        <p>Filter cards by:
         <br/>
         <br/>
         <select 

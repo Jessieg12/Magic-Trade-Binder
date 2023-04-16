@@ -10,7 +10,7 @@ NOTE:
 I would like to implement a way to Alphabetize the card names as they are being fetched!!
 */
 
-function BinderHome({cards, URL, onAddCard}){
+function BinderHome({cards}){
 
 
 
@@ -55,7 +55,7 @@ function BinderHome({cards, URL, onAddCard}){
       </div>
       <OrganizationBar />
       {mappedCard}
-      <NewCardHome URL={URL} onAddCard={onAddCard}/>
+      {/* <NewCardHome URL={URL} onAddCard={onAddCard}/> */}
     </div>
   )
 }

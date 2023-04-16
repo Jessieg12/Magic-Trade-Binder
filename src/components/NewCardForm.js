@@ -25,7 +25,8 @@ function NewCardForm({URL, onAddCard}){
     body: JSON.stringify(newCardInfo),
   })
     .then((r) => r.json())
-    .then((newCard) => onAddCard(newCard));
+    .then((newCard) => onAddCard(newCard))
+    .then(alert("New card added!"))
   }
 
   return(

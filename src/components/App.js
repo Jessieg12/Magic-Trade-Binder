@@ -3,7 +3,7 @@ import {Route, Switch} from "react-router-dom"
 import Home from "./Home";
 import BinderHome from "./BinderHome";
 import NavBar from "./NavBar";
-// import NewCardForm from "./NewCardForm";
+import NewCardHome from "./NewCardHome";
 
 let URL = 'http://localhost:3007/binder'
 
@@ -31,6 +31,9 @@ function App() {
       <BinderHome cards={cards} URL={URL} onAddCard={handleAddCard} />
     </Route>
     </Switch>
+    <Route exact path="/newcardhome">
+      <NewCardHome URL={URL} onAddCard={handleAddCard}/>
+    </Route>
     </div>
   );
 }

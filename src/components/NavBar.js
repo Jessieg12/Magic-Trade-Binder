@@ -15,15 +15,22 @@ function NavBar(){
           to="/"
           exact 
           className="linkStyles"
-          activeStyle={{background: "aliceblue",}}>
+          activeStyle={{background: "aliceblue", fontWeight: "bolder",}}>
           Home
         </NavLink>
         <NavLink
           to="/binderhome"
           exact
           className="linkStyles"
-          activeStyle={{background: "aliceblue",}}>
+          activeStyle={{background: "aliceblue", fontWeight: "bolder",}}>
           Trade Binder
+        </NavLink>
+        <NavLink
+          to="/newcardhome"
+          exact
+          className="linkStyles"
+          activeStyle={{background: "aliceblue", fontWeight: "bolder",}}>
+          Add New Card to Binder
         </NavLink>
       </div>
     );

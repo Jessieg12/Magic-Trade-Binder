@@ -1,6 +1,8 @@
 import React from "react";
+import { Route } from "react-router-dom";
 import NewCardHome from "./NewCardHome";
 import OrganizationBar from "./OrganizationBar";
+
 import "../comp-css/BinderHome.css"
 
 /*
@@ -39,7 +41,6 @@ function BinderHome({cards, URL, onAddCard}){
   )
   return(
     <div>
-      <NewCardHome URL={URL} onAddCard={onAddCard}/>
       <p className="binderTitle">Binder Home!</p>
       <div>
         <p className="legend">
@@ -52,9 +53,9 @@ function BinderHome({cards, URL, onAddCard}){
           </li>
         </p>
       </div>
-      <OrganizationBar sortCardsBy={sortCards} onCheckedBox={onCheckedBox} />
+      <OrganizationBar />
       {mappedCard}
-
+      <NewCardHome URL={URL} onAddCard={onAddCard}/>
     </div>
   )
 }

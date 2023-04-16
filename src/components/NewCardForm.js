@@ -73,10 +73,12 @@ function NewCardForm({URL, onAddCard}){
           <p className="cardPreviewText">Card Image Preview</p>
             {cardImage.length > 80 ? 
              <img 
+              alt="magicCardImage"
               className="cardPreview" 
               src={cardImage}>
             </img> : 
             <img 
+              alt="magicCardImage"
               className="cardPreview" 
               src='https://cards.scryfall.io/large/front/4/9/493f3c04-2e12-44b3-957e-50c7861c4667.jpg?1562488374'>
             </img>}

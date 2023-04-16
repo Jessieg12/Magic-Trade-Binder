@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+import {Route, Switch} from "react-router-dom"
 import Home from "./Home";
 import BinderHome from "./BinderHome";
+import NavBar from "./NavBar";
+// import NewCardForm from "./NewCardForm";
 
 let URL = 'http://localhost:3007/binder'
 
@@ -17,11 +20,17 @@ function App() {
     setCards([...cards, newCard]);
   }
 
-   console.log(cards, "app")
   return (
     <div>
+    <NavBar />
+    <Switch>  
+    <Route exact path="/">
       <Home />
+    </Route>
+    <Route exact path="/binderhome">
       <BinderHome cards={cards} URL={URL} onAddCard={handleAddCard} />
+    </Route>
+    </Switch>
     </div>
   );
 }

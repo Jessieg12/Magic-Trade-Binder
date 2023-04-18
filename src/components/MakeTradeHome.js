@@ -2,21 +2,23 @@ import React, { useState } from "react";
 import "../comp-css/MakeTradeHome.css"
 
 function MakeTradeHome({cards}){
-
     let [tradeCards, setTradeCards] = useState([])
 
-    function handleClick(card){
-        
-        if(!tradeCards.includes(card)){
-            const updatedTradeCards = [...tradeCards, card]
-        setTradeCards(updatedTradeCards)
-        }
-    }
+    function handleClick(card){    
+     if(!tradeCards.includes(card)){
+     const updatedTradeCards = [...tradeCards, card]
+     setTradeCards(updatedTradeCards)
+		 handleStyle(card)
+    }}
+
+		function handleStyle(card){
+			console.log(card.id)
+		}
     
     let mappedcards= cards.map((card)=> 
-    <div 
+    <div
     key={card.id} 
-    onClick={() => handleClick(card)} 
+    onClick={() => handleClick(card)}
     className="tradeCard">
         <h1>{card.cardName}</h1>
         <h2>{card.cardSet}</h2>

@@ -1,7 +1,7 @@
 import React from "react";
-import { Route } from "react-router-dom";
-import NewCardHome from "./NewCardHome";
-import OrganizationBar from "./OrganizationBar";
+// import { Route } from "react-router-dom";
+// import NewCardHome from "./NewCardHome";
+// import OrganizationBar from "../../Unused-components/OrganizationBar";
 
 import "../comp-css/BinderHome.css"
 
@@ -53,7 +53,7 @@ function BinderHome({cards}){
           </li>
         </p>
       </div>
-      <OrganizationBar />
+      {/* <OrganizationBar /> */}
       {mappedCard}
       {/* <NewCardHome URL={URL} onAddCard={onAddCard}/> */}
     </div>

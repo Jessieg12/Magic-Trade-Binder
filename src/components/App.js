@@ -4,6 +4,7 @@ import Home from "./Home";
 import BinderHome from "./BinderHome";
 import NavBar from "./NavBar";
 import NewCardHome from "./NewCardHome";
+import MakeTradeHome from "./MakeTradeHome";
 
 let URL = 'http://localhost:3007/binder'
 
@@ -30,10 +31,14 @@ function App() {
     <Route exact path="/binderhome">
       <BinderHome cards={cards} URL={URL} onAddCard={handleAddCard} />
     </Route>
-    </Switch>
     <Route exact path="/newcardhome">
       <NewCardHome URL={URL} onAddCard={handleAddCard}/>
     </Route>
+    <Route exact path="/maketradehome">
+      <MakeTradeHome cards={cards}/>
+    </Route>
+    </Switch>
+
     </div>
   );
 }

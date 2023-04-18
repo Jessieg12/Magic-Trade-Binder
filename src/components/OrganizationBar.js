@@ -9,18 +9,22 @@ function OrganizationBar({ onCheckedBox, sortCardsBy }){
   
   return(
     <div className="OrgText">
-      <p>Sort cards by:
-      <label>
+      <p>Sort Cards Alphabetically?
         <input
           type="checkbox"
           value="Alphabetically"
-          checked={sortCardsBy === false}
+          checked={sortCardsBy === "Alphabetically"}
           onChange={handleSorting}
         />
-        Alphabetically
-      </label>
       </p>
-      <label>
+    </div>
+  )
+}
+
+export default OrganizationBar
+
+/*
+<label>
         <p>Filter cards by:
         <br/>
         <br/>
@@ -33,8 +37,4 @@ function OrganizationBar({ onCheckedBox, sortCardsBy }){
         </select>
         </p>
       </label>
-    </div>
-  )
-}
-
-export default OrganizationBar
+*/

@@ -26,6 +26,13 @@ function NavBar(){
           Trade Binder
         </NavLink>
         <NavLink
+          to="/maketradehome"
+          exact
+          className="linkStyles"
+          activeStyle={{background: "aliceblue", fontWeight: "bolder",}}>
+          Want to make a trade?
+        </NavLink>
+        <NavLink
           to="/newcardhome"
           exact
           className="linkStyles"

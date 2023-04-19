@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import TradingCards from "./TradingCards";
 import "../comp-css/MakeTradeHome.css"
 
 function MakeTradeHome({cards}){
@@ -8,12 +9,8 @@ function MakeTradeHome({cards}){
      if(!tradeCards.includes(card)){
      const updatedTradeCards = [...tradeCards, card]
      setTradeCards(updatedTradeCards)
-		 handleStyle(card)
-    }}
-
-		function handleStyle(card){
-			console.log(card.id)
-		}
+    }
+	}
     
     let mappedcards= cards.map((card)=> 
     <div
@@ -34,6 +31,7 @@ function MakeTradeHome({cards}){
         <div>
             <p className="tradeHomeTitle">See a card that isn't for trade? Shoot me an offer anyways!</p>
             {mappedcards}
+						<TradingCards tradeCards={tradeCards}/>
         </div>
     )
 }

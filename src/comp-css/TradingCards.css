@@ -1,7 +1,11 @@
-.trade{
- border-top: 10px dashed rgb(91, 82, 82) ;
+.trades{
+  border-top: 10px dashed rgb(91, 82, 82) ;
   text-align: center;
   background-color: aliceblue;
   margin-top: 20px;
   padding-top: 20px;
+}
+
+.selectedCards{
+  font-weight: bold;
 }

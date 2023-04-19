@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TradingCards from "./TradingCards";
 import "../comp-css/MakeTradeHome.css"
 
@@ -11,6 +11,12 @@ function MakeTradeHome({cards}){
      setTradeCards(updatedTradeCards)
     }
 	}
+
+	useEffect(() => {
+		let newArray = []
+		let mapped = tradeCards.map((card) => newArray.push(card.cardName))
+		console.log(newArray)
+	},[tradeCards])
     
     let mappedcards= cards.map((card)=> 
     <div

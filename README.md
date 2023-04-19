@@ -36,6 +36,10 @@ I love this game dearly... I have even given my firstborn son the name Gideon to
 </p>
 <br></br>
 
+**Add App walkthrough here**
+
+
+
 ### Installation Instructions
 * Fork and clone the GitHub repo into your environment [here](https://github.com/Jessieg12/Magic-Trade-Binder).
 * Install the JSON server into your code editor with the following command. 

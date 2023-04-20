@@ -4,6 +4,7 @@ import "../comp-css/MakeTradeHome.css"
 
 function MakeTradeHome({cards}){
     let [tradeCards, setTradeCards] = useState([])
+    let [statement, setStatement] = useState([])
 
     function handleClick(card){    
      if(!tradeCards.includes(card)){
@@ -15,8 +16,15 @@ function MakeTradeHome({cards}){
 	useEffect(() => {
 		let newArray = []
 		let mapped = tradeCards.map((card) => newArray.push(card.cardName))
-		console.log(newArray)
+		setStatement(newArray)
 	},[tradeCards])
+
+    // function createPost(newArray){
+    //     let construct = `User wants to offer a trade on ${newArray}`
+    //     return(
+    //         <p>{construct}</p>
+    //     )
+    // }
     
     let mappedcards= cards.map((card)=> 
     <div
@@ -37,7 +45,7 @@ function MakeTradeHome({cards}){
         <div>
             <p className="tradeHomeTitle">See a card that isn't for trade? Shoot me an offer anyways!</p>
             {mappedcards}
-						<TradingCards tradeCards={tradeCards}/>
+						<TradingCards statement={statement} tradeCards={tradeCards}/>
         </div>
     )
 }

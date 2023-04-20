@@ -105,5 +105,23 @@
       "cardSet": "Midnight Hunt Commander",
       "forTrade": false
     }
+  ],
+  "comment": [
+    {
+      "id": 0,
+      "commitedTrade": "asdsa wants to trade asdas for Avacyn's Memorial,Atsushi, the Blazing Sky,Ashcloud Phoenix"
+    },
+    {
+      "commitedTrade": "asdsa wants to trade asdas for Avacyn's Memorial,Atsushi, the Blazing Sky,Ashcloud Phoenix",
+      "id": 1
+    },
+    {
+      "commitedTrade": "asdsa wants to trade asdas for Vampiric Tutor,Expropriate,Anafenza, the Foremost",
+      "id": 2
+    },
+    {
+      "commitedTrade": "ASDAS wants to trade ASDSA for Vampiric Tutor,Expropriate,Anafenza, the Foremost",
+      "id": 3
+    }
   ]
 }

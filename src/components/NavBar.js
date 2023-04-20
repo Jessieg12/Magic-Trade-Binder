@@ -39,6 +39,13 @@ function NavBar(){
           activeStyle={{background: "aliceblue", fontWeight: "bolder",}}>
           Add New Card to Binder
         </NavLink>
+        <NavLink
+          to="/pendingtrades"
+          exact
+          className="linkStyles"
+          activeStyle={{background: "aliceblue", fontWeight: "bolder",}}>
+          Pending Trades
+        </NavLink>
       </div>
     );
   }

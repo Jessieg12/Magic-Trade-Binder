@@ -26,3 +26,12 @@
   border: 10px dotted #000;
   padding: 20px;
 }
+
+.clickCards{
+	width:300px;
+  margin: 0 auto;
+  border: 5px solid;
+  text-align: center;
+	font-size: large;
+
+}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../comp-css/TradingCards.css"
 
-function TradingCards({tradeCards, statement}){
+function TradingCards({tradeCards, statement, setTradeCards}){
   let [tradingCardName, setTradingCardname] = useState('')
   let [userName, setUserName] = useState('')
 
@@ -9,6 +9,10 @@ function TradingCards({tradeCards, statement}){
   
   function handleSubmit(e){
     e.preventDefault()
+    setTradingCardname('')
+    setUserName('')
+    setTradeCards([])
+    e.target.reset()
     fetch("http://localhost:3007/comment", {
       method: "POST",
       headers: {
@@ -21,15 +25,15 @@ function TradingCards({tradeCards, statement}){
       .then((r) => r.json())
       .then(alert("Trade added!"))
     }
-    
+
 
   return(
     <div className="trades">
-      <h1 className="selectedCards">Card(s) Selected to be traded!</h1>
+      <h1 className="selectedCards">Card(s) Selected to be traded shown below!</h1>
       {mappedTradeCards}
       <h2>What would you like to trade?</h2>
         <div>Please fill out the following trade form.</div>
-        <form onSubmit={handleSubmit}>
+        <form id="form" onSubmit={handleSubmit}>
           <p>Please enter the card name(s) you wish to trade</p>
             <input
             type="text"

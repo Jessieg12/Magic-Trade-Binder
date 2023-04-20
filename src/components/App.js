@@ -5,6 +5,7 @@ import BinderHome from "./BinderHome";
 import NavBar from "./NavBar";
 import NewCardHome from "./NewCardHome";
 import MakeTradeHome from "./MakeTradeHome";
+import PendingTrades from "./PendingTrades";
 
 let URL = 'http://localhost:3007/binder'
 
@@ -36,6 +37,9 @@ function App() {
     </Route>
     <Route exact path="/maketradehome">
       <MakeTradeHome cards={cards}/>
+    </Route>
+    <Route exact path="/pendingtrades">
+      <PendingTrades />
     </Route>
     </Switch>
 

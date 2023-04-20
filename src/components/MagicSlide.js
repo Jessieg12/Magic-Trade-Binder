@@ -1,12 +1,8 @@
-import React
- , {useState, useEffect} 
-from "react";
-// import RandomCard from "./RandomCard";
+import React from "react";
 import "../comp-css/MagicSlide.css"
 
-
-
 function MagicSlide(){
+  
 
   
   return(
@@ -20,6 +16,46 @@ function MagicSlide(){
 export default MagicSlide
 
 /*
+
+  // const cardListURL = "http://localhost:3007/binder"
+
+ // let [card, setCard] = useState([])
+  // useEffect(() =>{
+  //   fetch(cardListURL)
+  //   .then((resp) => resp.json())
+  //   .then((data) => setCard(data))
+  // },[])
+  // // let [cards, setCards] = useState([])
+  // // useEffect(() =>{
+  // //   fetch(cardListURL)
+  // //   .then((resp) => resp.json())
+  // //   .then((cards) => setCards(cards))
+  // // },[])
+
+  // useEffect(() =>{
+
+  //   let randomCard = (Math.floor(Math.random() * card.length))
+  // console.log(card[randomCard].image)
+  // },[])
+
+const cardListURL = "http://localhost:3007/binder"
+
+function RandomCard(){
+  let [card, setCard] = useState([])
+  useEffect(() =>{
+    fetch(cardListURL)
+    .then((resp) => resp.json())
+    .then((data) => setCard(data))
+  },[])
+  // let [cards, setCards] = useState([])
+  // useEffect(() =>{
+  //   fetch(cardListURL)
+  //   .then((resp) => resp.json())
+  //   .then((cards) => setCards(cards))
+  // },[])
+
+  let randomCard = card.Math.floor(Math.random() * card.length)
+  console.log(randomCard)
 
 src={() =>handleRandomCard()}
 

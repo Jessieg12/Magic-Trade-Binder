@@ -37,7 +37,7 @@ function NewCardForm({URL, onAddCard}){
           <input 
             className="formStyle" 
             type="text" 
-            value={cardName} 
+            value={cardName } 
             onChange={(e)=>setCardName(e.target.value)}
             placeholder="Enter card name">
            </input>

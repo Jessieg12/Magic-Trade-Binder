@@ -1,18 +1,8 @@
 import React from "react";
-// import { Route } from "react-router-dom";
-// import NewCardHome from "./NewCardHome";
-// import OrganizationBar from "../../Unused-components/OrganizationBar";
 
 import "../comp-css/BinderHome.css"
 
-/*
-NOTE:
-I would like to implement a way to Alphabetize the card names as they are being fetched!!
-*/
-
 function BinderHome({cards}){
-
-
 
   let mappedCard = cards.map((card) => 
   <div 
@@ -53,9 +43,7 @@ function BinderHome({cards}){
           </li>
         </p>
       </div>
-      {/* <OrganizationBar /> */}
       {mappedCard}
-      {/* <NewCardHome URL={URL} onAddCard={onAddCard}/> */}
     </div>
   )
 }
@@ -65,6 +53,11 @@ export default BinderHome
 
 /*
 Recycled code for future use if needed
+
+
+
+NOTE:
+I would like to implement a way to Alphabetize the card names as they are being fetched!!
 
 
 // let cards = [{

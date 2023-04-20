@@ -1,0 +1,18 @@
+.pendingTradesTitle{
+    text-align: center;
+    font-size: xx-large;
+    border: 10px inset #000;
+    padding: 20px;
+}
+
+.pendingTradesCard{
+  border: 5px solid black;
+  padding: 15px;
+  margin: 15px;
+  margin-left: 400px;
+  margin-right: 400px;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+
+}

@@ -4,8 +4,26 @@
   background-color: aliceblue;
   margin-top: 20px;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
+.selectedcard{
+  padding-bottom: 10px;
+}
+
+.tradecard{
+  border: 5px solid;
+  margin-left: 300px;
+  margin-right: 300px;
+}
 .selectedCards{
   font-weight: bold;
+}
+
+.submitbutton{
+  margin-top: 20px;
+}
+
+.tradeinfo{
+  margin: 20px;
 }

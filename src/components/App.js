@@ -51,7 +51,8 @@ export default App;
 
 
 
-/* Recycled code for later use
+/*
+ Recycled code for later use
 
   {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

@@ -1,11 +1,6 @@
 import React from "react";
-// import NavBar from "./NavBar";
 import MagicSlide from "./MagicSlide";
 import "../comp-css/Home.css"
-
-//test
-
-
 
 function Home() {
   return (

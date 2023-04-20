@@ -23,16 +23,20 @@ function TradingCards({tradeCards, statement, setTradeCards}){
       }),
     })
       .then((r) => r.json())
-      .then(alert("Trade added!"))
+      .then(alert("Trade submitted!"))
     }
 
+    console.log(statement.join(' '))
 
   return(
     <div className="trades">
+      <div className="selectedcard">
       <h1 className="selectedCards">Card(s) Selected to be traded shown below!</h1>
       {mappedTradeCards}
+      </div>
+      <div className="tradecard"> 
       <h2>What would you like to trade?</h2>
-        <div>Please fill out the following trade form.</div>
+        <div>Please fill out the following trade form:</div>
         <form id="form" onSubmit={handleSubmit}>
           <p>Please enter the card name(s) you wish to trade</p>
             <input
@@ -48,11 +52,15 @@ function TradingCards({tradeCards, statement, setTradeCards}){
             onChange={(e) => setUserName(e.target.value)}
             placeholder="Enter your User Name"> 
             </input>
-            {statement.length && tradingCardName.length && userName.length > 0 ? <input type="submit" value={'Submit trade!'}/> : <p>Please complete the form above!</p>}
+            <br></br>
+            {statement.length && tradingCardName.length && userName.length > 0 ? 
+            <input className="submitbutton" type="submit" value={'Submit trade!'}/> : 
+            <p>Please complete the form above!</p>}
         </form>
         {statement.length && tradingCardName.length && userName.length > 0 ? 
-        <p>{userName} would like to trade {tradingCardName} for {statement}</p> : 
-        <p>Trade information will display here!</p>}
+        <p className="tradeinfo">{userName} would like to trade {tradingCardName} for {statement}</p> : 
+        <p className="tradeinfo">Trade information will display here!</p>}
+      </div>
     </div>
   )
 }

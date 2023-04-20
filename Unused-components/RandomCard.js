@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-const cardListURL = "http://localhost:3007/randomCards"
+const cardListURL = "http://localhost:3007/binder"
 
 function RandomCard(){
+  let [card, setCard] = useState([])
   useEffect(() =>{
     fetch(cardListURL)
     .then((resp) => resp.json())
-    .then((data) => console.log(data))
+    .then((data) => setCard(data))
   },[])
   // let [cards, setCards] = useState([])
   // useEffect(() =>{
@@ -14,7 +15,9 @@ function RandomCard(){
   //   .then((cards) => setCards(cards))
   // },[])
 
-  
+  let randomCard = card.Math.floor(Math.random() * card.length)
+  console.log(randomCard)
+
   // function randomCards(cards){
   //   let newArray = [...cards, newCards]
   //   let randomIndex = Math.floor(Math.random() * newArray.length)

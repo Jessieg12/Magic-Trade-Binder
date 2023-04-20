@@ -3,11 +3,6 @@ import { NavLink } from "react-router-dom"
 import "../comp-css/NavBar.css"
 
 function NavBar(){
-
-  // function handleLinkClick(e){
-  //   e.preventDefualt()
-  //   onChangePage(e.target.pathname)
-  // }
     return (
       <div className="linkDiv">
         <br></br>

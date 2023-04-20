@@ -15,16 +15,9 @@ function MakeTradeHome({cards}){
 
 	useEffect(() => {
 		let newArray = []
-		let mapped = tradeCards.map((card) => newArray.push(card.cardName))
+		tradeCards.map((card) => newArray.push(card.cardName))
 		setStatement(newArray)
 	},[tradeCards])
-
-    // function createPost(newArray){
-    //     let construct = `User wants to offer a trade on ${newArray}`
-    //     return(
-    //         <p>{construct}</p>
-    //     )
-    // }
     
     let mappedcards= cards.map((card)=> 
     <div

@@ -104,6 +104,13 @@
       "cardImage": "https://cards.scryfall.io/large/front/c/8/c8134a08-4c7f-419e-940d-95bc9f630ae2.jpg?1637628619",
       "cardSet": "Midnight Hunt Commander",
       "forTrade": false
+    },
+    {
+      "cardName": "Black Lotus",
+      "cardSet": "Alpha",
+      "cardImage": "https://cards.scryfall.io/large/front/b/0/b0faa7f2-b547-42c4-a810-839da50dadfe.jpg?1559591477",
+      "forTrade": true,
+      "id": 15
     }
   ],
   "comment": [
@@ -138,6 +145,10 @@
     {
       "commitedTrade": "Edyta Gábor wants to trade Urabrask for Vampiric Tutor, Expropriate",
       "id": 7
+    },
+    {
+      "commitedTrade": "Monsstrocity wants to trade Black Lotus for Vampiric Tutor,Expropriate,Karn Liberated",
+      "id": 8
     }
   ]
 }

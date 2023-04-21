@@ -37,7 +37,7 @@ function MakeTradeHome({cards}){
     return(
         <div>
             <p className="tradeHomeTitle">See a card that isn't for trade? Shoot me an offer anyways!</p>
-						<p className="clickCards">Click on the card(s) you want to trade</p>
+						<p className="clickCards">Click on the card(s) you want for trade</p>
             {mappedcards}
 						<TradingCards setTradeCards={setTradeCards} statement={statement} tradeCards={tradeCards}/>
         </div>

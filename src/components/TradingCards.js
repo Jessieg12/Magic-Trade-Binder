@@ -26,7 +26,7 @@ function TradingCards({tradeCards, statement, setTradeCards}){
       .then(alert("Trade submitted!"))
     }
 
-    console.log(statement.join(' '))
+
 
   return(
     <div className="trades">

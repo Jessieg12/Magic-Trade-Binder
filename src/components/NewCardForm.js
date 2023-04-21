@@ -17,6 +17,10 @@ function NewCardForm({URL, onAddCard}){
       cardImage,
       forTrade
     }
+    setCardName('')
+    setCardSet('')
+    setCardImage('')
+    setForTrade(false)
     fetch(URL, {
     method: "POST",
     headers: {

@@ -19,20 +19,25 @@ function TradingCards({tradeCards, statement, setTradeCards}){
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        commitedTrade: `${userName} wants to trade ${tradingCardName} for ${statement}`
+        commitedTrade: `${userName} wants to trade ${tradingCardName} for ${statement.join(', ')}`
       }),
     })
       .then((r) => r.json())
       .then(alert("Trade submitted!"))
     }
 
-    console.log(statement.join(' '))
+  function handleClick(e){
+    e.preventDefault()
+    setTradeCards([])
+  }
 
   return(
     <div className="trades">
       <div className="selectedcard">
       <h1 className="selectedCards">Card(s) Selected to be traded shown below!</h1>
       {mappedTradeCards}
+      <br></br>
+      <button onClick={handleClick}>Reset card(s) selected</button>
       </div>
       <div className="tradecard"> 
       <h2>What would you like to trade?</h2>
@@ -58,7 +63,7 @@ function TradingCards({tradeCards, statement, setTradeCards}){
             <p>Please complete the form above!</p>}
         </form>
         {statement.length && tradingCardName.length && userName.length > 0 ? 
-        <p className="tradeinfo">{userName} would like to trade {tradingCardName} for {statement}</p> : 
+        <p className="tradeinfo">{userName} would like to trade {tradingCardName} for {statement.join(', ')}</p> : 
         <p className="tradeinfo">Trade information will display here!</p>}
       </div>
     </div>

@@ -11,6 +11,7 @@ let URL = 'http://localhost:3007/binder'
 
 function App() {
   let [cards, setCards] = useState([])
+
   
   useEffect(() =>{
     fetch(URL)
@@ -26,7 +27,7 @@ function App() {
     <div>
     <NavBar />
     <Switch>  
-    <Route exact path="/">
+    <Route exact path="/home">
       <Home />
     </Route>
     <Route exact path="/binderhome">
@@ -40,6 +41,9 @@ function App() {
     </Route>
     <Route exact path="/pendingtrades">
       <PendingTrades />
+    </Route>
+    <Route path="*">
+      <h1>404 not found</h1>
     </Route>
     </Switch>
 

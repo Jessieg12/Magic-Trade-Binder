@@ -7,7 +7,7 @@ function NavBar(){
       <div className="linkDiv">
         <br></br>
         <NavLink
-          to="/"
+          to="/home"
           exact 
           className="linkStyles"
           activeStyle={{background: "aliceblue", fontWeight: "bolder",}}>

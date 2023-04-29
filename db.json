@@ -104,6 +104,13 @@
       "cardImage": "https://cards.scryfall.io/large/front/c/8/c8134a08-4c7f-419e-940d-95bc9f630ae2.jpg?1637628619",
       "cardSet": "Midnight Hunt Commander",
       "forTrade": false
+    },
+    {
+      "cardName": "Mox Opal",
+      "cardSet": "Double Masters",
+      "cardImage": "https://cards.scryfall.io/large/front/5/6/56001a36-126b-4c08-af98-a6cc4d84210e.jpg?1599709600",
+      "forTrade": true,
+      "id": 15
     }
   ],
   "comment": [
@@ -138,6 +145,14 @@
     {
       "commitedTrade": "Edyta Gábor wants to trade Urabrask for Vampiric Tutor, Expropriate",
       "id": 7
+    },
+    {
+      "commitedTrade": "Henry wants to trade Black Lotus for Vampiric Tutor, Expropriate, Karn Liberated",
+      "id": 8
+    },
+    {
+      "commitedTrade": "Jake wants to trade Wheel of Fortune for Vampiric Tutor, Expropriate, Karn Liberated",
+      "id": 9
     }
   ]
 }

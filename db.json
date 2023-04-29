@@ -111,6 +111,13 @@
       "cardImage": "https://cards.scryfall.io/large/front/5/6/56001a36-126b-4c08-af98-a6cc4d84210e.jpg?1599709600",
       "forTrade": true,
       "id": 15
+    },
+    {
+      "cardName": "Black Lotus",
+      "cardSet": "Alpha",
+      "cardImage": "https://cards.scryfall.io/large/front/b/0/b0faa7f2-b547-42c4-a810-839da50dadfe.jpg?1559591477",
+      "forTrade": true,
+      "id": 15
     }
   ],
   "comment": [

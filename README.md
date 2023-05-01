@@ -38,7 +38,17 @@ I love this game dearly... I have even given my firstborn son the name Gideon to
 
 **Add App walkthrough here**
 
+Here we have our Links that will display each page of my project using browserRouter, Switch, and Route
+ <br></br>
+ <p align='center'>
+ <img src="../gifs/Links.gif">
+ </p>
 
+ Shown bellow is the links working to show my trade binder
+ <br></br>
+ <p align='center'>
+ <img src="../gifs/TradeBinderLink.gif">
+ </p>
 
 ### Installation Instructions
 * Fork and clone the GitHub repo into your environment [here](https://github.com/Jessieg12/Magic-Trade-Binder).

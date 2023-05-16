@@ -1,0 +1,22 @@
+.card{
+  display:inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 350px;
+  padding: 30px;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  border: 5px ;
+}
+
+
+.cardImage{
+  width: 225px;
+  height: 275px;
+}
+
+.trade{
+  pointer-events: none;
+}

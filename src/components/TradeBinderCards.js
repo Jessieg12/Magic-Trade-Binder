@@ -1,4 +1,5 @@
 import React from "react";
+import "../comp-css/TradeBinderCards.css"
 
 function TradeBinderCards({cards}){
 let mappedCard = cards.map((card) => 

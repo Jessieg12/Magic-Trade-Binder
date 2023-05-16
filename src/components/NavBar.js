@@ -7,28 +7,28 @@ function NavBar(){
       <div className="linkDiv">
         <br></br>
         <NavLink
-          to="/home"
+          to="/"
           exact 
           className="linkStyles"
           activeStyle={{background: "aliceblue", fontWeight: "bolder",}}>
           Home
         </NavLink>
         <NavLink
-          to="/binderhome"
+          to="/tradebinder"
           exact
           className="linkStyles"
           activeStyle={{background: "aliceblue", fontWeight: "bolder",}}>
           Trade Binder
         </NavLink>
         <NavLink
-          to="/maketradehome"
+          to="/tradepage"
           exact
           className="linkStyles"
           activeStyle={{background: "aliceblue", fontWeight: "bolder",}}>
           Want to make a trade?
         </NavLink>
         <NavLink
-          to="/newcardhome"
+          to="/addcard"
           exact
           className="linkStyles"
           activeStyle={{background: "aliceblue", fontWeight: "bolder",}}>

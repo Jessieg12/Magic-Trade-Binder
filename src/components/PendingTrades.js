@@ -13,6 +13,7 @@ function PendingTrades(){
     .then((resp) => resp.json())
     .then((comments) => setComments(comments))
   },[])
+  
   return(
     <div>
       <h1 className="pendingTradesTitle">Here are some of the pending trades I have!</h1>

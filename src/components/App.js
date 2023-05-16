@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import {Route, Switch} from "react-router-dom"
 import Home from "./Home";
-import BinderHome from "./BinderHome";
+import TradeBinder from "./TradeBinder";
 import NavBar from "./NavBar";
-import NewCardHome from "./NewCardHome";
-import MakeTradeHome from "./MakeTradeHome";
+import AddCard from "./AddCard";
+import TradePage from "./TradePage";
 import PendingTrades from "./PendingTrades";
 
 let URL = 'http://localhost:3007/binder'
@@ -27,17 +27,17 @@ function App() {
     <div>
     <NavBar />
     <Switch>  
-    <Route exact path="/home">
+    <Route exact path="/">
       <Home />
     </Route>
-    <Route exact path="/binderhome">
-      <BinderHome cards={cards} URL={URL} onAddCard={handleAddCard} />
+    <Route exact path="/tradebinder">
+      <TradeBinder cards={cards} URL={URL} onAddCard={handleAddCard} />
     </Route>
-    <Route exact path="/newcardhome">
-      <NewCardHome URL={URL} onAddCard={handleAddCard}/>
+    <Route exact path="/tradepage">
+      <TradePage cards={cards}/>
     </Route>
-    <Route exact path="/maketradehome">
-      <MakeTradeHome cards={cards}/>
+    <Route exact path="/addcard">
+      <AddCard URL={URL} onAddCard={handleAddCard}/>
     </Route>
     <Route exact path="/pendingtrades">
       <PendingTrades />

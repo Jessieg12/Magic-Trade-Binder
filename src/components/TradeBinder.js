@@ -1,34 +1,8 @@
 import React from "react";
+import TradeBinderCards from "./TradeBinderCards";
+import "../comp-css/TradeBinder.css"
 
-import "../comp-css/BinderHome.css"
-
-function BinderHome({cards}){
-
-  let mappedCard = cards.map((card) => 
-  <div 
-    className="card" 
-    key={card.id}>
-      <p>
-    {card.cardName}
-      </p>
-      <img 
-        alt="binderCards"
-        className="cardImage" 
-        src={card.cardImage}>
-      </img>
-      <p>
-        {card.cardSet}
-      </p>
-      <input 
-        className="trade"
-        type="checkbox" 
-        defaultChecked={card.forTrade}/>
-        <label>
-          Available for trade?
-        </label>
-  
-  </div>
-  )
+function TradeBinder({cards}){
   return(
     <div>
       <p className="binderTitle">Binder Home!</p>
@@ -43,12 +17,12 @@ function BinderHome({cards}){
           </li>
         </p>
       </div>
-      {mappedCard}
+      <TradeBinderCards cards={cards}/>
     </div>
   )
 }
 
-export default BinderHome
+export default TradeBinder
 
 
 /*

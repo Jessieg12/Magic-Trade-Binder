@@ -1,8 +1,8 @@
 import React from "react";
-import NewCardForm from "./NewCardForm";
-import "../comp-css/NewCardHome.css"
+import AddCardForm from "./AddCardForm";
+import "../comp-css/AddCard.css"
 
-function NewCardHome({URL, onAddCard}){
+function AddCard({URL, onAddCard}){
 
   return(
     <div>
@@ -10,9 +10,9 @@ function NewCardHome({URL, onAddCard}){
         <div>
           <h1 className="info">Use this form below to add new cards</h1>
         </div>
-      <NewCardForm URL={URL} onAddCard={onAddCard}/>
+      <AddCardForm URL={URL} onAddCard={onAddCard}/>
     </div>
   )
 }
 
-export default NewCardHome
+export default AddCard

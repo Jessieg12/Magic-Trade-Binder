@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../comp-css/TradingCards.css"
+import "../comp-css/TradePageForm.css"
 
-function TradingCards({tradeCards, statement, setTradeCards}){
+function TradePageForm({tradeCards, statement, setTradeCards}){
   let [tradingCardName, setTradingCardname] = useState('')
   let [userName, setUserName] = useState('')
 
@@ -70,4 +70,4 @@ function TradingCards({tradeCards, statement, setTradeCards}){
   )
 }
 
-export default TradingCards
+export default TradePageForm

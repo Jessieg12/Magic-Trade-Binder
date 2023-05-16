@@ -48,6 +48,18 @@ Here we have our Links that will display each page of my project using browserRo
  
  ![Alt text](src/gifs/TradeBinderLink.gif)
 
+You can also request a trade and see your pending trade as well!
+<br></br>
+
+![Alt text](src/gifs/TradePending.gif)
+
+Need to add a card to the binder? Not a problem! Use the add card form!
+
+![Alt text](src/gifs/AddCard.gif)
+
+Once you've done that the binder and trade section will reflect the change for the added card!
+
+![Alt text](src/gifs/CardsAdded!.gif)
 
 
 ### Installation Instructions

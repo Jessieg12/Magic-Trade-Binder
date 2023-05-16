@@ -40,15 +40,15 @@ I love this game dearly... I have even given my firstborn son the name Gideon to
 
 Here we have our Links that will display each page of my project using browserRouter, Switch, and Route
  <br></br>
- <p align='center'>
- <img src="../gifs/Links.gif">
- </p>
+ 
+ ![Alt text](src/gifs/Links.gif)
 
- Shown bellow is the links working to show my trade binder
+ Shown below is the links working to show my trade binder
  <br></br>
- <p align='center'>
- <img src="../gifs/TradeBinderLink.gif">
- </p>
+ 
+ ![Alt text](src/gifs/TradeBinderLink.gif)
+
+
 
 ### Installation Instructions
 * Fork and clone the GitHub repo into your environment [here](https://github.com/Jessieg12/Magic-Trade-Binder).

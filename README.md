@@ -64,6 +64,7 @@ Once you've done that the binder and trade section will reflect the change for t
 
 ### Installation Instructions
 * Fork and clone the GitHub repo into your environment [here](https://github.com/Jessieg12/Magic-Trade-Binder).
+
 * Install the JSON server into your code editor with the following command. 
     ```bash
      npm install -g json
@@ -78,12 +79,20 @@ Once you've done that the binder and trade section will reflect the change for t
      ```
 
 ### Requirements
+* To get the app running after completing installation use the following command
+  ```bash
+  npm start
+  ```
 * To run our db.json file needed for this app have a JSON server installed to have access to the needed data.
+
 * If/once JSON-server is installed, you will need to run the JSON-server command in your terminal to have the db.json file running inside the app's directory. 
     ```bash
     json-server --watch db.json --port 3007
+
+    or
+
+    npm run server
     ```
-  * Not a requirement but a strong suggestion, VS users should install the Live Server extension for ease of access to the app's webpage.
 
 ### Credits
  * All of the photos used in this application were sourced from Scryfall's website for clarity.

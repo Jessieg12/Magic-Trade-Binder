@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import "../comp-css/TradePageForm.css"
+import React, {useState} from "react";
+import "../comp-css/TradePageSelectedForm.css"
 
-function TradePageForm({tradeCards, statement, setTradeCards}){
+function TradePageSelectedForm({setTradeCards, statement}){
   let [tradingCardName, setTradingCardname] = useState('')
   let [userName, setUserName] = useState('')
 
-  let mappedTradeCards = tradeCards.map((card) => <div key={card.id}>{card.cardName}</div>)
-  
   function handleSubmit(e){
     e.preventDefault()
     setTradingCardname('')
@@ -26,23 +24,9 @@ function TradePageForm({tradeCards, statement, setTradeCards}){
       .then(alert("Trade submitted!"))
     }
 
-  function handleClick(e){
-    e.preventDefault()
-    setTradeCards([])
-  }
-
-  return(
-    <div className="trades">
-      <div className="selectedcard">
-      <h1 className="selectedCards">Card(s) Selected to be traded shown below!</h1>
-      {mappedTradeCards}
-      <br></br>
-      <button onClick={handleClick}>Reset card(s) selected</button>
-      </div>
-      <div className="tradecard"> 
-      <h2>What would you like to trade?</h2>
-        <div>Please fill out the following trade form:</div>
-        <form id="form" onSubmit={handleSubmit}>
+  return (
+    <div>
+    <form id="form" onSubmit={handleSubmit}>
           <p>Please enter the card name(s) you wish to trade</p>
             <input
             type="text"
@@ -65,9 +49,8 @@ function TradePageForm({tradeCards, statement, setTradeCards}){
         {statement.length && tradingCardName.length && userName.length > 0 ? 
         <p className="tradeinfo">{userName} would like to trade {tradingCardName} for {statement.join(', ')}</p> : 
         <p className="tradeinfo">Trade information will display here!</p>}
-      </div>
     </div>
   )
 }
 
-export default TradePageForm
+export default TradePageSelectedForm

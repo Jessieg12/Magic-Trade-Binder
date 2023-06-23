@@ -2,7 +2,6 @@ import React from "react";
 import "../comp-css/Home.css"
 
 function Home() {
-
   return (
     <div>
       <p className="title">

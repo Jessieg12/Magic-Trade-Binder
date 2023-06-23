@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import "../comp-css/TradePageSelectedForm.css"
 
 function TradePageSelectedForm({setTradeCards, statement}){
-  let [tradingCardName, setTradingCardname] = useState('')
-  let [userName, setUserName] = useState('')
+  const [tradingCardName, setTradingCardname] = useState('')
+  const [userName, setUserName] = useState('')
 
   function handleSubmit(e){
     e.preventDefault()

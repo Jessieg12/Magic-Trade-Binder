@@ -10,43 +10,42 @@ import PendingTrades from "./PendingTrades";
 let URL = 'http://localhost:3007/binder'
 
 function App() {
-  let [cards, setCards] = useState([])
+  const [cards, setCards] = useState([])
 
   
-  useEffect(() =>{
+useEffect(() =>{
     fetch(URL)
       .then((resp) => resp.json())
       .then((cards) => setCards(cards))
-  },[])
+},[])
 
-  function handleAddCard(newCard) {
+function handleAddCard(newCard) {
     setCards([...cards, newCard]);
   }
 
-  return (
+return (
     <div>
     <NavBar />
-    <Switch>  
-    <Route exact path="/">
-      <Home />
-    </Route>
-    <Route exact path="/tradebinder">
-      <TradeBinder cards={cards} URL={URL} onAddCard={handleAddCard} />
-    </Route>
-    <Route exact path="/tradepage">
-      <TradePage cards={cards}/>
-    </Route>
-    <Route exact path="/addcard">
-      <AddCard URL={URL} onAddCard={handleAddCard}/>
-    </Route>
-    <Route exact path="/pendingtrades">
-      <PendingTrades />
-    </Route>
-    <Route path="*">
-      <h1>404 not found</h1>
-    </Route>
-    </Switch>
-
+      <Switch>  
+        <Route exact path="/">
+         <Home />
+        </Route>
+        <Route exact path="/tradebinder">
+          <TradeBinder cards={cards} />
+        </Route>
+        <Route exact path="/tradepage">
+          <TradePage cards={cards}/>
+        </Route>
+        <Route exact path="/addcard">
+          <AddCard URL={URL} onAddCard={handleAddCard}/>
+        </Route>
+        <Route exact path="/pendingtrades">
+          <PendingTrades />
+        </Route>
+        <Route path="*">
+          <h1>404 not found</h1>
+        </Route>
+      </Switch>
     </div>
   );
 }

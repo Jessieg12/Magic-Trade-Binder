@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
+import PendingTradesComments from "./PendingTradesComments";
 import "../comp-css/PendingTrades.css"
 
 let url = 'http://localhost:3007/comment'
 
 function PendingTrades(){
-  let [comments, setComments] = useState([])
+  const [comments, setComments] = useState([])
 
-  let mappedComments = comments.map((comment) => <div className="pendingTradesCard" key={comment.id}>{comment.commitedTrade}</div>)
+  let mappedComments = comments.map((comment) => 
+  <PendingTradesComments key={comment.id} comment={comment} />)
 
   useEffect(() => {
     fetch(url)

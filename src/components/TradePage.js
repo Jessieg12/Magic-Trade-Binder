@@ -4,8 +4,8 @@ import TradePageCards from "./TradePageCards";
 import "../comp-css/TradePage.css"
 
 function TradePage({cards}){
-    let [tradeCards, setTradeCards] = useState([])
-    let [statement, setStatement] = useState([])
+    const [tradeCards, setTradeCards] = useState([])
+    const [statement, setStatement] = useState([])
 
     function handleClick(card){    
      if(!tradeCards.includes(card)){

@@ -1,11 +1,11 @@
 import React from "react";
 import "../comp-css/TradeBinderCards.css"
 
-function TradeBinderCards({cards}){
-let mappedCard = cards.map((card) => 
-  <div 
-    className="card" 
-    key={card.id}>
+function TradeBinderCards({card}){
+
+  return (
+      <div 
+    className="card">
       <p>
     {card.cardName}
       </p>
@@ -24,12 +24,6 @@ let mappedCard = cards.map((card) =>
         <label>
           Available for trade?
         </label>
-  
-  </div>
-  )
-  return (
-    <div>
-      {mappedCard}
     </div>
   )
 }

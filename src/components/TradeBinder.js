@@ -3,6 +3,9 @@ import TradeBinderCards from "./TradeBinderCards";
 import "../comp-css/TradeBinder.css"
 
 function TradeBinder({cards}){
+  let mappedCard = cards.map((card) => 
+    <TradeBinderCards key={card.id} card={card} />)
+
   return(
     <div>
       <p className="binderTitle">Binder Home!</p>
@@ -17,7 +20,7 @@ function TradeBinder({cards}){
           </li>
         </p>
       </div>
-      <TradeBinderCards cards={cards}/>
+      {mappedCard}
     </div>
   )
 }

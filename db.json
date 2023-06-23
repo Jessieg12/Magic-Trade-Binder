@@ -111,6 +111,20 @@
       "cardImage": "https://cards.scryfall.io/large/front/5/6/56001a36-126b-4c08-af98-a6cc4d84210e.jpg?1599709600",
       "forTrade": true,
       "id": 15
+    },
+    {
+      "cardName": "Kytheon, Hero of Akros",
+      "cardSet": "SDCC 2015",
+      "cardImage": "https://cards.scryfall.io/large/front/2/4/249cfc69-062a-43d4-9f09-7a8ba976f899.jpg?1666871389",
+      "forTrade": false,
+      "id": 16
+    },
+    {
+      "cardName": "Esika, God of the Tree",
+      "cardSet": "Secret Lair Drop",
+      "cardImage": "https://cards.scryfall.io/large/front/4/6/46d43696-3c63-4c55-bc61-e1560c8b8201.jpg?1683383495",
+      "forTrade": true,
+      "id": 17
     }
   ],
   "comment": [
@@ -153,6 +167,22 @@
     {
       "commitedTrade": "Jake wants to trade Wheel of Fortune for Vampiric Tutor, Expropriate, Karn Liberated",
       "id": 9
+    },
+    {
+      "commitedTrade": "John wants to trade The Black Lotus, Mountain, and Storm Crow for Vampiric Tutor, Expropriate, Karn Liberated",
+      "id": 10
+    },
+    {
+      "commitedTrade": "Jack wants to trade Glided lotus for Vampiric Tutor, Expropriate, Karn Liberated",
+      "id": 11
+    },
+    {
+      "commitedTrade": "Franky wants to trade Basic Land for Kytheon, Hero of Akros, Mox Opal",
+      "id": 12
+    },
+    {
+      "commitedTrade": "Franky wants to trade Karn, Silver Golem for Esika, God of the Tree",
+      "id": 13
     }
   ]
 }

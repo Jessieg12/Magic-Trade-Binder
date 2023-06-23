@@ -4,10 +4,10 @@ import "../comp-css/AddCardForm.css"
 // Richard Gar Card   https://cards.scryfall.io/large/front/4/9/493f3c04-2e12-44b3-957e-50c7861c4667.jpg?1562488374
 
 function AddCardForm({URL, onAddCard}){
-  let [cardName, setCardName] = useState('')
-  let [cardSet, setCardSet] = useState('')
-  let [cardImage, setCardImage] = useState('')
-  let [forTrade, setForTrade] = useState(false)
+  const [cardName, setCardName] = useState('')
+  const [cardSet, setCardSet] = useState('')
+  const [cardImage, setCardImage] = useState('')
+  const [forTrade, setForTrade] = useState(false)
 
   function handleForm(e){
     e.preventDefault()
@@ -21,6 +21,7 @@ function AddCardForm({URL, onAddCard}){
     setCardSet('')
     setCardImage('')
     setForTrade(false)
+
     fetch(URL, {
     method: "POST",
     headers: {
@@ -41,7 +42,7 @@ function AddCardForm({URL, onAddCard}){
           <input 
             className="formStyle" 
             type="text" 
-            value={cardName } 
+            value={cardName} 
             onChange={(e)=>setCardName(e.target.value)}
             placeholder="Enter card name">
            </input>

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "../comp-css/TradePageSelectedForm.css"
 
-function TradePageSelectedForm({setTradeCards, statement}){
+function TradePageSelectedForm({setTradeCards, clickedCards}){
   const [tradingCardName, setTradingCardname] = useState('')
   const [userName, setUserName] = useState('')
 
@@ -17,7 +17,7 @@ function TradePageSelectedForm({setTradeCards, statement}){
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        commitedTrade: `${userName} wants to trade ${tradingCardName} for ${statement.join(', ')}`
+        commitedTrade: `${userName} wants to trade ${tradingCardName} for ${clickedCards.join(', ')}`
       }),
     })
       .then((r) => r.json())
@@ -42,12 +42,12 @@ function TradePageSelectedForm({setTradeCards, statement}){
             placeholder="Enter your User Name"> 
             </input>
             <br></br>
-            {statement.length && tradingCardName.length && userName.length > 0 ? 
+            {clickedCards.length && tradingCardName.length && userName.length > 0 ? 
             <input className="submitbutton" type="submit" value={'Submit trade!'}/> : 
             <p>Please complete the form above!</p>}
         </form>
-        {statement.length && tradingCardName.length && userName.length > 0 ? 
-        <p className="tradeinfo">{userName} would like to trade {tradingCardName} for {statement.join(', ')}</p> : 
+        {clickedCards.length && tradingCardName.length && userName.length > 0 ? 
+        <p className="tradeinfo">{userName} would like to trade {tradingCardName} for {clickedCards.join(', ')}</p> : 
         <p className="tradeinfo">Trade information will display here!</p>}
     </div>
   )

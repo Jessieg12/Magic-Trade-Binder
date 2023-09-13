@@ -2,7 +2,7 @@ import React from "react";
 import TradePageSelectedForm from "./TradePageSelectedForm";
 import "../comp-css/TradePageSelected.css"
 
-function TradePageSelected({tradeCards, statement, setTradeCards}){
+function TradePageSelected({tradeCards, clickedCards, setTradeCards}){
 
   let mappedTradeCards = tradeCards.map((card) => <div key={card.id}>{card.cardName}</div>)
 
@@ -22,7 +22,7 @@ function TradePageSelected({tradeCards, statement, setTradeCards}){
       <div className="tradecard"> 
       <h2>What would you like to trade?</h2>
         <div>Please fill out the following trade form:</div>
-    <TradePageSelectedForm setTradeCards={setTradeCards} statement={statement}/>
+    <TradePageSelectedForm setTradeCards={setTradeCards} clickedCards={clickedCards}/>
       </div>
     </div>
   )

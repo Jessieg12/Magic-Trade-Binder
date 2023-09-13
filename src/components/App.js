@@ -11,8 +11,7 @@ let URL = 'http://localhost:3007/binder'
 
 function App() {
   const [cards, setCards] = useState([])
-
-  
+ 
 useEffect(() =>{
     fetch(URL)
       .then((resp) => resp.json())
@@ -20,7 +19,7 @@ useEffect(() =>{
 },[])
 
 function handleAddCard(newCard) {
-    setCards([...cards, newCard]);
+    setCards([...cards, newCard])
   }
 
 return (
@@ -28,7 +27,7 @@ return (
     <NavBar />
       <Switch>  
         <Route exact path="/">
-         <Home />
+         <Home cards={cards}/>
         </Route>
         <Route exact path="/tradebinder">
           <TradeBinder cards={cards} />
@@ -51,25 +50,3 @@ return (
 }
 
 export default App;
-
-
-
-/*
- Recycled code for later use
-
-  {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> 
-      
-*/

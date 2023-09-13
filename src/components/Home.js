@@ -1,7 +1,10 @@
 import React from "react";
 import "../comp-css/Home.css"
 
-function Home() {
+function Home({ cards }) {
+  const randomIndex = Math.floor(Math.random() * cards.length)
+  const randomCard = cards[randomIndex]
+
   return (
     <div>
       <p className="title">
@@ -11,30 +14,18 @@ function Home() {
       
        <span className="emoji">🧙🏻‍♂</span> 
       </p>
+      {randomCard ? (
       <div>
-      <img alt="RandomCard" className="image" src="https://backs.scryfall.io/large/2/2/222b7a3b-2321-4d4c-af19-19338b134971.jpg?1677416389"/>
+        <img src={randomCard.cardImage} className="image" alt={randomCard.cardName} />
       </div>
+      ) : (
+        <div>
+          <h1 className="image" >Now Loading Random Card Image...</h1>
+          <img alt="RandomCard" className="image" src="https://backs.scryfall.io/large/2/2/222b7a3b-2321-4d4c-af19-19338b134971.jpg?1677416389"/>
+        </div>
+      )}
     </div>
   )
 }
 
 export default Home
-
-/*
-
- const [count, setCount] = useState(0)
-  const [word, setWord] = useState("")
-
-  function handleSubmit(e){
-    e.preventDefault()
-    let wordLength = word.length + count
-    setCount(wordLength)
-    setWord('')
-  }
- <form onSubmit={handleSubmit}>
-        <input type="text" value={word} onChange={(e) =>setWord(e.target.value)}/>
-        <button>click me</button>
-      </form>
-      <p>{count}</p>
-
-*/

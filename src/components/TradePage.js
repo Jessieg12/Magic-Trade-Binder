@@ -5,7 +5,7 @@ import "../comp-css/TradePage.css"
 
 function TradePage({cards}){
     const [tradeCards, setTradeCards] = useState([])
-    const [statement, setStatement] = useState([])
+    const [clickedCards, setClickedCards] = useState([])
 
     function handleClick(card){    
      if(!tradeCards.includes(card)){
@@ -15,9 +15,9 @@ function TradePage({cards}){
 	}
 
 	useEffect(() => {
-		let newArray = []
-		tradeCards.map((card) => newArray.push(card.cardName))
-		setStatement(newArray)
+		let clickedCardsArray = []
+		tradeCards.map((card) => clickedCardsArray.push(card.cardName))
+		setClickedCards(clickedCardsArray)
 	},[tradeCards])
 
     return(
@@ -25,7 +25,7 @@ function TradePage({cards}){
       <p className="tradeHomeTitle">See a card that isn't for trade? Shoot me an offer anyways!</p>
 	  <p className="clickCards">Click on the card(s) you want for trade</p>
       <TradePageCards cards={cards} handleClick={handleClick}/>
-	  <TradePageSelected setTradeCards={setTradeCards} statement={statement} tradeCards={tradeCards}/>
+	  <TradePageSelected setTradeCards={setTradeCards} clickedCards={clickedCards} tradeCards={tradeCards}/>
     </div>
     )
 }

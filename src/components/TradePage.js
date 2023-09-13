@@ -22,7 +22,7 @@ function TradePage({cards}){
 
     return(
      <div>
-      <p className="tradeHomeTitle">See a card that isn't for trade? Shoot me an offer anyways!</p>
+      <p className="tradeHomeTitle">Shown below are cards up for trade!</p>
 	  <p className="clickCards">Click on the card(s) you want for trade</p>
       <TradePageCards cards={cards} handleClick={handleClick}/>
 	  <TradePageSelected setTradeCards={setTradeCards} clickedCards={clickedCards} tradeCards={tradeCards}/>

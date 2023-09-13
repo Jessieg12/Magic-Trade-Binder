@@ -26,7 +26,7 @@ return (
     <div>
     <NavBar />
       <Switch>  
-        <Route exact path="/">
+        <Route exact path="/home">
          <Home cards={cards}/>
         </Route>
         <Route exact path="/tradebinder">

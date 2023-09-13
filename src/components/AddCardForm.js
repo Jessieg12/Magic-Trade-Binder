@@ -4,31 +4,43 @@ import "../comp-css/AddCardForm.css"
 // Richard Gar Card   https://cards.scryfall.io/large/front/4/9/493f3c04-2e12-44b3-957e-50c7861c4667.jpg?1562488374
 
 function AddCardForm({URL, onAddCard}){
-  const [cardName, setCardName] = useState('')
-  const [cardSet, setCardSet] = useState('')
-  const [cardImage, setCardImage] = useState('')
-  const [forTrade, setForTrade] = useState(false)
+  const [formData, setFormData] = useState({
+    cardName: "",
+    cardSet: "",
+    cardImage: "",
+    forTrade: false,
+  })
 
-  function handleForm(e){
-    e.preventDefault()
-    const newCardInfo = {
-      cardName,
-      cardSet,
-      cardImage,
-      forTrade
+  function handleChange(e){
+    let name = e.target.name
+    let value = e.target.value
+
+    if(e.target.type === "checkbox"){
+      value = e.target.checked
     }
-    setCardName('')
-    setCardSet('')
-    setCardImage('')
-    setForTrade(false)
+
+    setFormData({
+      ...formData,
+      [name]: value
+    })
+  }
+
+  function handleSubmit(e){
+    e.preventDefault()
+    setFormData({
+      cardName: "",
+      cardSet: "",
+      cardImage: "",
+      forTrade: false,
+    })
 
     fetch(URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(newCardInfo),
-  })
+    body: JSON.stringify(formData),
+    })
     .then((r) => r.json())
     .then((newCard) => onAddCard(newCard))
     .then(alert("New card added!"))
@@ -38,35 +50,39 @@ function AddCardForm({URL, onAddCard}){
     <div className="bottom">
       <div className="cardForm">
         <p> Please enter a new card name</p>
-        <form onSubmit={handleForm}>
+        <form onSubmit={handleSubmit}>
           <input 
-            className="formStyle" 
+            className="formStyle"
+            name="cardName"
             type="text" 
-            value={cardName} 
-            onChange={(e)=>setCardName(e.target.value)}
+            value={formData.cardName} 
+            onChange={handleChange}
             placeholder="Enter card name">
-           </input>
+          </input>
         <p> Please enter the exact set the card is from</p>
           <input 
             className="formStyle" 
+            name="cardSet"
             type="text" 
-            value={cardSet} 
-            onChange={(e)=>setCardSet(e.target.value)} 
+            value={formData.cardSet} 
+            onChange={handleChange} 
             placeholder="Enter card set">
           </input>
         <p> Please enter the exact image of the new card from scryfall</p>
           <input 
             className="formStyle" 
+            name="cardImage"
             type="text"
-            value={cardImage}
-            onChange={(e)=>setCardImage(e.target.value)}
+            value={formData.cardImage}
+            onChange={handleChange}
             placeholder="Enter scryfall image URL"> 
           </input>
         <p className="formLegend">Legend: Clicking the checkbox constitutes the card is up for trade.</p>
           <input 
             type="checkbox"
-            checked={forTrade}
-            onChange={(e)=>setForTrade(e.target.checked)}>
+            name="forTrade"
+            checked={formData.forTrade}
+            onChange={handleChange}>
           </input>
           <label>Is this card Available for trade?</label>
         <p>🃏
@@ -77,11 +93,11 @@ function AddCardForm({URL, onAddCard}){
           <div className="wrapper">
           <div className="cardPreviewCard">
           <p className="cardPreviewText">Card Image Preview</p>
-            {cardImage.length > 80 ? 
+            {formData.cardImage.length > 80 ? 
              <img 
               alt="magicCardImage"
               className="cardPreview" 
-              src={cardImage}>
+              src={formData.cardImage}>
             </img> : 
             <img 
               alt="magicCardImage"

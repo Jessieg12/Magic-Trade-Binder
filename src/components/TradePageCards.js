@@ -2,7 +2,7 @@ import React from "react";
 
 function TradePageCards({cards, handleClick}){
 
-  let mappedcards= cards.map((card)=> 
+  let mappedcards = cards.map((card) => 
     card.forTrade === true ?
       <div
         key={card.id} 

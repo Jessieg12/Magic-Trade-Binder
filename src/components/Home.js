@@ -10,9 +10,9 @@ function Home({ cards }) {
       <p className="title">
         <span className="emoji">🧙🏻‍♂</span> 
       
-      Welcome to my Trade Binder! 
+         Welcome to my Trade Binder! 
       
-       <span className="emoji">🧙🏻‍♂</span> 
+        <span className="emoji">🧙🏻‍♂</span> 
       </p>
       {randomCard ? (
       <div>

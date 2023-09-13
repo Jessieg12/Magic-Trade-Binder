@@ -1,31 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import TradePageSelected from "./TradePageSelected";
 import TradePageCards from "./TradePageCards";
 import "../comp-css/TradePage.css"
 
 function TradePage({cards}){
-    const [tradeCards, setTradeCards] = useState([])
-    const [clickedCards, setClickedCards] = useState([])
+  const [tradeCards, setTradeCards] = useState([])
 
-    function handleClick(card){    
-     if(!tradeCards.includes(card)){
-     const updatedTradeCards = [...tradeCards, card]
-     setTradeCards(updatedTradeCards)
-    }
-	}
+  function handleClick(card){    
+    if(!tradeCards.includes(card)){
+    setTradeCards([...tradeCards, card])
+  }}
 
-	useEffect(() => {
-		let clickedCardsArray = []
-		tradeCards.map((card) => clickedCardsArray.push(card.cardName))
-		setClickedCards(clickedCardsArray)
-	},[tradeCards])
-
-    return(
-     <div>
+  return(
+    <div>
       <p className="tradeHomeTitle">Shown below are cards up for trade!</p>
-	  <p className="clickCards">Click on the card(s) you want for trade</p>
+	    <p className="clickCards">Click on the card(s) you want for trade</p>
       <TradePageCards cards={cards} handleClick={handleClick}/>
-	  <TradePageSelected setTradeCards={setTradeCards} clickedCards={clickedCards} tradeCards={tradeCards}/>
+	    <TradePageSelected setTradeCards={setTradeCards} tradeCards={tradeCards}/>
     </div>
     )
 }

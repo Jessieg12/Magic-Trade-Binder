@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "../comp-css/AddCardForm.css"
 
-// Richard Gar Card   https://cards.scryfall.io/large/front/4/9/493f3c04-2e12-44b3-957e-50c7861c4667.jpg?1562488374
-
-function AddCardForm({URL, onAddCard}){
+function AddCardForm({ onAddCard }){
   const [formData, setFormData] = useState({
     cardName: "",
     cardSet: "",
@@ -34,12 +32,12 @@ function AddCardForm({URL, onAddCard}){
       forTrade: false,
     })
 
-    fetch(URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formData),
+    fetch('http://localhost:3007/binder', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+        body: JSON.stringify(formData),
     })
     .then((r) => r.json())
     .then((newCard) => onAddCard(newCard))

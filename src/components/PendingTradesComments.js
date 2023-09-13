@@ -1,6 +1,6 @@
 import React from "react";
 
-function PendingTradesComments({comment}){
+function PendingTradesComments({ comment }){
   return(
     <div className="pendingTradesCard">
       {comment.commitedTrade}

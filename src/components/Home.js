@@ -20,7 +20,7 @@ function Home({ cards }) {
       </div>
       ) : (
         <div>
-          <h1 className="image" >Now Loading Random Card Image...</h1>
+          <h1>Now Loading Random Card Image...</h1>
           <img alt="RandomCard" className="image" src="https://backs.scryfall.io/large/2/2/222b7a3b-2321-4d4c-af19-19338b134971.jpg?1677416389"/>
         </div>
       )}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {Route, Switch} from "react-router-dom"
+import { Route, Switch } from "react-router-dom"
 import Home from "./Home";
 import TradeBinder from "./TradeBinder";
 import NavBar from "./NavBar";
@@ -7,13 +7,11 @@ import AddCard from "./AddCard";
 import TradePage from "./TradePage";
 import PendingTrades from "./PendingTrades";
 
-let URL = 'http://localhost:3007/binder'
-
 function App() {
   const [cards, setCards] = useState([])
  
 useEffect(() =>{
-    fetch(URL)
+    fetch('http://localhost:3007/binder')
       .then((resp) => resp.json())
       .then((cards) => setCards(cards))
 },[])
@@ -36,7 +34,7 @@ return (
           <TradePage cards={cards}/>
         </Route>
         <Route exact path="/addcard">
-          <AddCard URL={URL} onAddCard={handleAddCard}/>
+          <AddCard onAddCard={handleAddCard}/>
         </Route>
         <Route exact path="/pendingtrades">
           <PendingTrades />

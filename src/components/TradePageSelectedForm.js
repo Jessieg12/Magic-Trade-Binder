@@ -10,10 +10,6 @@ function TradePageSelectedForm({setTradeCards, tradeCards, onAddComment}){
 
   function handleSubmit(e){
     e.preventDefault()
-    setTradingCardname('')
-    setUserName('')
-    setTradeCards([])
-    // e.target.reset()
     fetch("http://localhost:3007/comment", {
       method: "POST",
       headers: {
@@ -26,8 +22,15 @@ function TradePageSelectedForm({setTradeCards, tradeCards, onAddComment}){
       .then((r) => r.json())
       .then((newComment) => {
         onAddComment(newComment)
+        clearForm()
         alert("Trade submitted!")
       })
+    }
+
+    function clearForm(){
+      setTradingCardname('')
+      setUserName('')
+      setTradeCards([])
     }
 
   return (

@@ -25,12 +25,6 @@ function AddCardForm({ onAddCard }){
 
   function handleSubmit(e){
     e.preventDefault()
-    setFormData({
-      cardName: "",
-      cardSet: "",
-      cardImage: "",
-      forTrade: false,
-    })
 
     fetch('http://localhost:3007/binder', {
       method: "POST",
@@ -42,7 +36,17 @@ function AddCardForm({ onAddCard }){
     .then((r) => r.json())
     .then((newCard) => {
       onAddCard(newCard)
+      clearForm()
       alert("New card added!")
+    })
+  }
+
+  function clearForm(){
+    setFormData({
+      cardName: "",
+      cardSet: "",
+      cardImage: "",
+      forTrade: false,
     })
   }
 

@@ -40,8 +40,10 @@ function AddCardForm({ onAddCard }){
         body: JSON.stringify(formData),
     })
     .then((r) => r.json())
-    .then((newCard) => onAddCard(newCard))
-    .then(alert("New card added!"))
+    .then((newCard) => {
+      onAddCard(newCard)
+      alert("New card added!")
+    })
   }
 
   return(

@@ -9,6 +9,7 @@ import PendingTrades from "./PendingTrades";
 
 function App() {
   const [cards, setCards] = useState([])
+  const [comments, setComments] = useState([])
  
 useEffect(() =>{
     fetch('http://localhost:3007/binder')
@@ -16,9 +17,21 @@ useEffect(() =>{
       .then((cards) => setCards(cards))
 },[])
 
+useEffect(() => {
+  fetch('http://localhost:3007/comment')
+  .then((resp) => resp.json())
+  .then((comments) => setComments(comments))
+},[])
+
 function handleAddCard(newCard) {
     setCards([...cards, newCard])
   }
+
+function handleAddComment(newComment){
+  setComments([...comments, newComment])
+}
+
+console.log(comments);
 
 return (
     <div>
@@ -31,13 +44,13 @@ return (
           <TradeBinder cards={cards} />
         </Route>
         <Route exact path="/tradepage">
-          <TradePage cards={cards}/>
+          <TradePage cards={cards} onAddComment={handleAddComment}/>
         </Route>
         <Route exact path="/addcard">
           <AddCard onAddCard={handleAddCard}/>
         </Route>
         <Route exact path="/pendingtrades">
-          <PendingTrades />
+          <PendingTrades comments={comments} />
         </Route>
         <Route path="*">
           <h1>404 not found</h1>

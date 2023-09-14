@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "../comp-css/TradePageSelectedForm.css"
 
-function TradePageSelectedForm({setTradeCards, tradeCards}){
+function TradePageSelectedForm({setTradeCards, tradeCards, onAddComment}){
   const [tradingCardName, setTradingCardname] = useState('')
   const [userName, setUserName] = useState('')
 
@@ -13,18 +13,21 @@ function TradePageSelectedForm({setTradeCards, tradeCards}){
     setTradingCardname('')
     setUserName('')
     setTradeCards([])
-    e.target.reset()
+    // e.target.reset()
     fetch("http://localhost:3007/comment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        commitedTrade: `${userName} wants to trade ${tradingCardName} for ${selectedCardNamesString}`
+        committedTrade: `${userName} wants to trade ${tradingCardName} for ${selectedCardNamesString}`
       }),
     })
       .then((r) => r.json())
-      .then(alert("Trade submitted!"))
+      .then((newComment) => {
+        onAddComment(newComment)
+        alert("Trade submitted!")
+      })
     }
 
   return (
@@ -37,7 +40,7 @@ function TradePageSelectedForm({setTradeCards, tradeCards}){
             onChange={(e) => setTradingCardname(e.target.value)}
             placeholder="Enter Card Name"> 
           </input>
-        <p>Please enter your user Name</p>
+        <p>Please enter your user name</p>
           <input
             type="text"
             value={userName}

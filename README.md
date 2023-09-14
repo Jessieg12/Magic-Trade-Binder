@@ -36,7 +36,6 @@ I love this game dearly... I have even given my firstborn son the name Gideon to
 </p>
 <br></br>
 
-**Add App walkthrough here**
 
 Here we have our Links that will display each page of my project using browserRouter, Switch, and Route
  <br></br>

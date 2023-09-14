@@ -3,7 +3,7 @@ import React from "react";
 function PendingTradesComments({ comment }){
   return(
     <div className="pendingTradesCard">
-      {comment.commitedTrade}
+      {comment.committedTrade}
     </div>
   )
 }
